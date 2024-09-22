@@ -26,6 +26,15 @@ SECRET_KEY = 'django-insecure-(7c*qpn3olyh@wo2(%a3lw$6f0e+aoi@ka(sfuk!v6=!93y@x5
 DEBUG = False
 
 ALLOWED_HOSTS = ['www.thinkuni.in', 'thinkuni.in']
+from django.http import HttpResponseForbidden
+ALLOWED_IPS = ['106.206.23.242']
+
+def restrict_admin(get_response):
+    def middleware(request):
+        if request.path.startswith('/admin/') and request.META['REMOTE_ADDR'] not in ALLOWED_IPS:
+            return HttpResponseForbidden("You are not allowed to access this page.")
+        return get_response(request)
+    return middleware
 
 import os
 from dotenv import load_dotenv
