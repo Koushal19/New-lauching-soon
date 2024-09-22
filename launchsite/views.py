@@ -28,3 +28,6 @@ def send_thank_you_email(name, email):
     recipient_list = [email]
 
     send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+
+
+

@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-(7c*qpn3olyh@wo2(%a3lw$6f0e+aoi@ka(sfuk!v6=!93y@x5
 DEBUG = False
 
 ALLOWED_HOSTS = ['www.thinkuni.in', 'thinkuni.in']
+
 from django.http import HttpResponseForbidden
 ALLOWED_IPS = ['106.206.23.242']
 
@@ -71,6 +72,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    restrict_admin,
 ]
 
 ROOT_URLCONF = 'website.urls'
