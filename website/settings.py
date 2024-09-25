@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(7c*qpn3olyh@wo2(%a3lw$6f0e+aoi@ka(sfuk!v6=!93y@x5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.thinkuni.in', 'thinkuni.in','127.0.0.1']
 
