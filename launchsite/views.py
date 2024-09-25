@@ -23,7 +23,7 @@ def frontpage(request):
 
 def send_thank_you_email(name, email):
     subject = "Thank You for Registering!"
-    message = f"Hi {name},\n\nThank you for registering. Stay tuned for more updates!\n\nBest regards,\nThinkUni Team"
+    message = f"Hi {name},\n\nThank you for registering.ThinkUni is a Student Marketplace where we host products and sevices as a one stop solution to all your student needs , to help students have a hassle free Unidays.Stay tuned for more updates!\n\nBest regards,\nThinkUni Team"
     from_email = settings.EMAIL_HOST_USER  
     recipient_list = [email]
 

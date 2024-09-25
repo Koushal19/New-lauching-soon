@@ -19,7 +19,7 @@ from django.urls import path,include
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('thinkuni_admin_9952_901333/', admin.site.urls),
     path('',include('launchsite.urls')),
     path('robots.txt', TemplateView.as_view(template_name='core/robots.txt', content_type='text/plain')),
     
