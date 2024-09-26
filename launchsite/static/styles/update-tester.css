@@ -48,7 +48,7 @@ h2{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: url("bg.webp");
+    background: url("/static/images/bg.webp");
     background-size: cover;
     background-position: center;
     position: relative;
