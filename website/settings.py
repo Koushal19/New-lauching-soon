@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-(7c*qpn3olyh@wo2(%a3lw$6f0e+aoi@ka(sfuk!v6=!93y@x5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.thinkuni.in', 'thinkuni.in', '127.0.0.1']
+ALLOWED_HOSTS = ['www.thinkuni.in', 'thinkuni.in', '43.205.117.47']
 
 import os
 from dotenv import load_dotenv
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -120,6 +121,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
 
 
 # Default primary key field type
